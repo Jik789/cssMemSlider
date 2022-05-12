@@ -9,29 +9,28 @@
 </head>
 <body>
   <main class="main">
-    <div class="slider middle">
+    <div class="slider">
+      <input class="check" type="radio" name="r" id="r1" checked>
+      <input class="check" type="radio" name="r" id="r2">
+      <input class="check" type="radio" name="r" id="r3">
+      <input class="check" type="radio" name="r" id="r4">
       <div class="slide-list">
-        <input class="check" type="radio" name="r" id="r1" checked>
-        <input class="check" type="radio" name="r" id="r2">
-        <input class="check" type="radio" name="r" id="r3">
-        <input class="check" type="radio" name="r" id="r4">
-
-        <div class="slide-item"><img src="./img/mem1.jpg" alt="one"></div>
+        <div class="slide-item s1"><img src="./img/mem1.jpg" alt="one"></div>
         <div class="slide-item"><img src="./img/mem2.jpg" alt="two"></div>
         <div class="slide-item"><img src="./img/mem3.jpg" alt="three"></div>
         <div class="slide-item"><img src="./img/mem4.jpg" alt="four"></div>
       </div>
-      <div class="slide-name-list">
-        <p class="slide-name-item">Mem one</p>
+      <div class="name-list">
+        <p class="slide-name-item d1">Mem one</p>
         <p class="slide-name-item">Mem two</p>
         <p class="slide-name-item">Mem three</p>
         <p class="slide-name-item">Mem four</p>
       </div>
       <div class="navigation-list">
-        <label class="swipe-btn" for="r1" class="bar"></label>
-        <label class="swipe-btn" for="r2" class="bar"></label>
-        <label class="swipe-btn" for="r3" class="bar"></label>
-        <label class="swipe-btn" for="r4" class="bar"></label>
+        <label class="swipe-btn z1" for="r1" class="bar"><span class="slide-button-item"></span></label>
+        <label class="swipe-btn" for="r2" class="bar"><span class="slide-button-item"></span></label>
+        <label class="swipe-btn" for="r3" class="bar"><span class="slide-button-item"></span></label>
+        <label class="swipe-btn" for="r4" class="bar"><span class="slide-button-item"></span></label>
       </div>
     </div>
   </main>
