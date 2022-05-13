@@ -23,17 +23,20 @@ li {
   max-width: 62.5rem;
   max-height: 62.5rem;
   margin: 10rem auto auto auto;
+  padding: 0.75rem;
 }
 
 .slider {
   overflow: hidden;
-  background-color: gray;
+  border-radius: 2rem;
+  background-color: black;
   display: grid;
   row-gap: 2rem;
   grid-template-columns: 65% 35%;
   grid-template-areas: 
             "image image"
             "name navigation";
+  box-shadow: 0.5rem 0.5rem 0.5rem gray;
 }
 
 .check {
@@ -57,24 +60,24 @@ li {
 }
 
 #r1:checked ~ .navigation-list .swipe-btn:nth-child(1) .slide-button-item {
-  background-color: red;
+  background-color: inherit;
 }
 
 #r2:checked ~ .navigation-list .swipe-btn:nth-child(2) .slide-button-item {
-  background-color: red;
+  background-color: inherit;
 }
 
 #r3:checked ~ .navigation-list .swipe-btn:nth-child(3) .slide-button-item {
-  background-color: red;
+  background-color: inherit;
 }
 
 #r4:checked ~ .navigation-list .swipe-btn:nth-child(4) .slide-button-item {
-  background-color: red;
+  background-color: inherit;
 }
 
 .slide-list {
   width: 400%;
-  max-height: 500px;
+  max-height: 31.25rem;
   display: flex;
   grid-area: image;
 }
@@ -97,52 +100,45 @@ li {
 }
 
 .slide-name-item {
+  padding: 1rem;
+  color: white;
+  font-size: 1.25rem;
   transition: all 2s ease;
   width: 25%;
 }
 
 .navigation-list {
   display: flex;
-  gap: 10px;
   grid-area: navigation;
   background-color: black;
+  box-shadow: -4rem 0.5rem 3rem black;
 }
 
 .swipe-btn {
   cursor: pointer;
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   margin: 1rem;
   border-radius: 50%;
-  background-color: bisque;
-  transition: all .5s ease;
-}
-
-.swipe-btn:hover {
-  background-color: green;
+  background-color: transparent;
+  transition: all 0.75s ease;
 }
 
 .slide-button-item {
+  cursor: pointer;
   display: block;
   width: 1.5rem;
   height: 1.5rem;
+  margin-top: 25%;
+  margin-left: 25%;
   border-radius: 50%;
-  border: 0.25rem solid bisque;
-  background-color: bisque;
-  transition: all .5s ease;
+  border: 0.25rem solid white;
+  background-color: white;
+  transition: all 0.75s ease;
 }
 
-.z1 {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  border: 0.25rem solid bisque;
-  background-color: blue;
-  transition: all .5s ease;
-}
-
-.z1:hover {
-  border: 0.25rem solid green;
+.swipe-btn:hover .slide-button-item {
+  background-color: red;
+  border: 0.25rem solid red;
 }
