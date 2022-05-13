@@ -56,6 +56,22 @@ li {
   margin-left: -75%;
 }
 
+#r1:checked ~ .navigation-list .swipe-btn:nth-child(1) .slide-button-item {
+  background-color: red;
+}
+
+#r2:checked ~ .navigation-list .swipe-btn:nth-child(2) .slide-button-item {
+  background-color: red;
+}
+
+#r3:checked ~ .navigation-list .swipe-btn:nth-child(3) .slide-button-item {
+  background-color: red;
+}
+
+#r4:checked ~ .navigation-list .swipe-btn:nth-child(4) .slide-button-item {
+  background-color: red;
+}
+
 .slide-list {
   width: 400%;
   max-height: 500px;
@@ -95,9 +111,22 @@ li {
 .swipe-btn {
   cursor: pointer;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 1rem;
+  border-radius: 50%;
+  background-color: bisque;
+  transition: all .5s ease;
+}
+
+.swipe-btn:hover {
+  background-color: green;
+}
+
+.slide-button-item {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 0.25rem solid bisque;
   background-color: bisque;
@@ -105,25 +134,15 @@ li {
 }
 
 .z1 {
-  border: 0.25rem solid bisque;
-  background-color: blue;
-}
-
-/* .a1 {
-  cursor: pointer;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 0.25rem solid bisque;
-  background-color: red;
-} */
-
-.swipe-btn:hover {
-  border: 0.25rem solid green;
+  background-color: blue;
+  transition: all .5s ease;
 }
 
-.swipe-btn:active {
-  transform: scale(1.2);
-  background-color: green;
+.z1:hover {
+  border: 0.25rem solid green;
 }
