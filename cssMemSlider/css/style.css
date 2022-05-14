@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+.main {
+  max-width: 62.5rem;
+  max-height: 62.5rem;
+  margin: 5rem auto;
+  padding: 0.75rem;
+}
+
+.slider {
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: black;
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: 65% 35%;
+  grid-template-areas: 
+            "image image"
+            "name navigation";
+  box-shadow: 0 0 2rem black;
+}
+
+.check {
+  display: none;
+}
+
+#r1:checked ~ .slide-list .s1, #r1:checked ~ .name-list .d1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .slide-list .s1, #r2:checked ~ .name-list .d1 {
+  margin-left: -25%;
+}
+
+#r3:checked ~ .slide-list .s1, #r3:checked ~ .name-list .d1 {
+  margin-left: -50%;
+}
+
+#r4:checked ~ .slide-list .s1, #r4:checked ~ .name-list .d1 {
+  margin-left: -75%;
+}
+
+#r1:checked ~ .navigation-list .swipe-btn:nth-child(1) .slide-button-item {
+  background-color: inherit;
+}
+
+#r2:checked ~ .navigation-list .swipe-btn:nth-child(2) .slide-button-item {
+  background-color: inherit;
+}
+
+#r3:checked ~ .navigation-list .swipe-btn:nth-child(3) .slide-button-item {
+  background-color: inherit;
+}
+
+#r4:checked ~ .navigation-list .swipe-btn:nth-child(4) .slide-button-item {
+  background-color: inherit;
+}
+
+.slide-list {
+  width: 400%;
+  max-height: 31.25rem;
+  display: flex;
+  grid-area: image;
+}
+
+.slide-item {
+  width: 25%;
+  transition: all 1s ease;
+}
+
+.slide-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.name-list {
+  grid-area: name;
+  display: flex;
+  width: 615%;
+}
+
+.slide-name-item {
+  padding: 1rem;
+  color: white;
+  font-size: 1.25rem;
+  transition: all 1s ease;
+  width: 25%;
+}
+
+.navigation-list {
+  display: flex;
+  grid-area: navigation;
+  background-color: black;
+  box-shadow: -4rem 0.5rem 3rem black;
+  justify-self: end;
+}
+
+.swipe-btn {
+  cursor: pointer;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.75s ease;
+}
+
+.slide-button-item {
+  cursor: pointer;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 25%;
+  margin-left: 25%;
+  border-radius: 50%;
+  border: 0.25rem solid white;
+  background-color: white;
+  transition: all 0.75s ease;
+}
+
+.swipe-btn:hover .slide-button-item {
+  background-color: red;
+  border: 0.25rem solid red;
+}
+
+.swipe-btn:active .slide-button-item {
+  background-color: purple;
+  border: 0.25rem solid purple;
+}
+
+@media (max-width: 48rem) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+  }
+  .name-list {
+    order: 1;
+  }
+  .navigation-list {
+    align-self: center;
+    box-shadow: none;
+  }
+  .swipe-btn {
+    margin: 0;
+  }
+  .slide-name-item {
+    padding: 0 0 4rem 1rem;
+  }
+}
